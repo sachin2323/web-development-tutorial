@@ -1,0 +1,67 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.string-top {
+  border: 1px solid;
+  height: 200px;
+  transform: rotateX(90);
+  z-index: 1;
+}
+.string-bottom {
+  margin-top: -200px;
+  border: 1px solid;
+  height: 300px;
+  transform: rotateX(90);
+  animation: stringStrech;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: both;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes stringStrech {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+  }
+  100% {
+    background-color: lightcoral;
+    transform: translateY(-150px);
+  }
+}
+
+.anime {
+  margin-top: -300px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border-style: dotted;
+  background-color: coral;
+  animation-name: bounceIT;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: both;
+  z-index: 3;
+}
+
+@keyframes bounceIT {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+  }
+  100% {
+    background-color: lightcoral;
+    transform: translateY(-200px);
+  }
+}
