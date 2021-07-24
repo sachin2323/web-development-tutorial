@@ -1,0 +1,87 @@
+html {
+  font-size: 20px;
+}
+
+.abs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 30vh;
+  border: 1px solid red;
+}
+
+.px {
+  border: 2px solid red;
+  width: 100px;
+  height: 100px;
+}
+
+/* 1 in = 96px */
+
+.inch {
+  border: 2px solid blue;
+  width: 1in;
+  height: 100px;
+}
+
+/* 1 cm = 36 px */
+
+.cm {
+  border: 2px solid green;
+  width: 1cm;
+  height: 100px;
+}
+
+.rel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  border: 1px solid teal;
+  font-size: 20px;
+}
+
+.em {
+  border: 2px solid red;
+  font-size: 1.5em;
+  width: auto;
+  height: auto;
+}
+
+/* 1 in = 96px */
+
+.rem {
+  border: 2px solid blue;
+  font-size: 1.5rem;
+  width: auto;
+  height: auto;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  width: 60%;
+  border: 1px solid teal;
+  font-size: 20px;
+}
+
+.percentage {
+  border: 2px solid red;
+  font-size: 1.5em;
+  width: 100%;
+  height: auto;
+}
+
+/* 1 in = 96px */
+
+.viewport {
+  border: 2px solid blue;
+  font-size: 1.5rem;
+  width: auto;
+  height: auto;
+}

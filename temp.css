@@ -1,0 +1,43 @@
+/* BEM naming convention */
+body {
+  margin: 0;
+  padding: 0;
+}
+.newsPaper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 2px solid red;
+  height: 500px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.newsPaper__1 {
+  border: 2px solid blue;
+  height: 200px;
+  /* width: 350px; */
+  width: 10%;
+}
+
+.newsPaper__2 {
+  border: 2px solid green;
+  height: 200px;
+  /* width: 350px; */
+  width: 10%;
+}
+
+.newsPaper__3 {
+  border: 2px solid yellow;
+  height: 200px;
+  width: 20%;
+}
+
+.newsPaper__4 {
+  border: 2px solid salmon;
+  height: 200px;
+  /* width: 350px; */
+  width: 20%;
+}
