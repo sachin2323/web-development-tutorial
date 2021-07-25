@@ -41,3 +41,44 @@ body {
   /* width: 350px; */
   width: 20%;
 }
+
+._flexbox {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  border: 2px solid orange;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  /* flex-direction: column; */
+  width: 3000px;
+  height: 1000px;
+  border: 2px solid violet;
+  /* flex-grow: 1; */
+}
+
+.flex-container__box1 {
+  height: 200px;
+  border: 2px solid red;
+
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+
+.flex-container__box2 {
+  height: 200px;
+
+  flex-basis: 200px;
+  border: 2px solid yellow;
+  flex-shrink: 2;
+}
+
+.flex-container__box3 {
+  height: 200px;
+
+  flex-basis: 200px;
+  border: 2px solid green;
+  flex-shrink: 3;
+}

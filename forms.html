@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<form action="http://localhost:3000/forms" method="post"> 
+    <label style="display:block;margin-bottom: 10px;">
+        Username
+    <input required disabled value="username1" name="username" type="text"/>
+    <input type="hidden" name="username" value="username1"/>
+</label>
+    <label style="display:block;margin-bottom: 10px;">
+        Email
+    <input required name="email" type="email" pattern=".*@gmail.com"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+        Password
+        <input required name="password" type="password"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+        Resume
+        <input name="resume" type="file" accept=".jpeg"/>
+    </label>
+    <fieldset>
+        <legend>Address</legend>
+        <label style="display:block;margin-bottom: 10px;">
+        Building Name
+    <input name="building" type="text"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+        zipcode
+    <input name="zipcode" type="number"/>
+    </label>
+    </fieldset>
+    <!-- <label style="display:block;margin-bottom: 10px;">
+        Date
+    <input type="date"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+        Date
+    <input type="datetime-local"/>
+    </label> -->
+    <label style="display:block;margin-bottom: 10px;">
+        Website
+    <input name="website" type="url"/>
+    </label>
+    <!-- <label style="display:block;margin-bottom: 10px;">
+        Range
+    <input type="range" min="10" max="100"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+        Time
+    <input type="time"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+    <input type="hidden" value="email"/>
+    </label>
+    <label >
+        Progress
+    <progress value="30" max="100"/>
+    </label>
+    <label style="display:block;margin-bottom: 10px;">
+        Meter
+     <meter min="0" max="100" low="20" high="50" optimum="80"  value="10"></meter>
+    </label> -->
+  
+    <!-- <label style="display:block;margin-bottom: 10px;">
+        Select
+     <select>
+         <optgroup label="fruits">
+        <option value="apls">apple</option>
+         <option value="orange">Orange</option>
+         <option>banana</option>
+         </optgroup>
+         <optgroup label="cars">
+        <option value="apls">BMW</option>
+         <option value="orange">Ferrari</option>
+         <option>Audi</option>
+         </optgroup>
+     </select>
+    </label> -->
+    <label style="display:block;margin-bottom: 10px;">
+        Already Working
+    
+    <label style="display:block;margin-bottom: 10px;">
+     Yes
+        <input name="working" value="yes" type="radio" />
+     </label>
+     <label style="display:block;margin-bottom: 10px;">
+        No
+     <input name="working" value="no" type="radio" />
+     </label>
+    </label>
+      <label style="display:block;margin-bottom: 10px;">
+        Terms and Conditions
+     <input type="checkbox" name="T&C" checked="true"/>
+    </label>
+    <button style="width:300px;height:50px" name="submit">Submit</button>
+</form>
+</body>
+</html>
