@@ -4,36 +4,57 @@
   height: 70vh; */
   /* position: relative; */
   border: 1px solid salmon;
-  margin-top: 20%;
-  height: 70vh;
+  margin-top: 10%;
+  height: 200vh;
   position: relative;
   /* display: grid; */
 }
 
+/* .grid2-section {
+  position: relative;
+  top: 30%;
+  border: 1px solid grey;
+  height: 40vh;
+} */
+
 .box1 {
-  /* position: absolute; */
+  position: absolute;
   width: 100px;
   height: 100px;
   background-color: aqua;
   /* align-self: center;
   justify-self: center; */
-  /* top: 20px;
-  left: 50px;
-  right: 50px; */
+  top: 17%;
+  left: 38%;
+  z-index: 12;
 }
 
 .box2 {
+  position: absolute;
+  top: 13%;
+  left: 40%;
   width: 100px;
   height: 100px;
+  z-index: 13;
   background-color: yellow;
 }
 
 .box3 {
   position: absolute;
-
-  right: 0;
-  top: calc(50% - 50px);
+  left: 42%;
+  top: 10%;
   width: 100px;
   height: 100px;
   background-color: red;
+  z-index: 14;
+  transition: perspective(500px) translate(180deg);
+}
+
+.box4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: teal;
 }
