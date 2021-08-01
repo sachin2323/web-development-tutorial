@@ -1,0 +1,39 @@
+.grid-section {
+  /* display: grid;
+  place-items: center;
+  height: 70vh; */
+  /* position: relative; */
+  border: 1px solid salmon;
+  margin-top: 20%;
+  height: 70vh;
+  position: relative;
+  /* display: grid; */
+}
+
+.box1 {
+  /* position: absolute; */
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  /* align-self: center;
+  justify-self: center; */
+  /* top: 20px;
+  left: 50px;
+  right: 50px; */
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+.box3 {
+  position: absolute;
+
+  right: 0;
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
