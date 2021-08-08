@@ -52,9 +52,9 @@
 
 // Template Strings
 
-const title = " Best books of 2021";
-const author = "Adarsh";
-let likes = 30;
+// const title = " Best books of 2021";
+// const author = "Adarsh";
+// let likes = 30;
 
 // simple concatenation
 // let str =
