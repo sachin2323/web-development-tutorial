@@ -28,17 +28,17 @@
 // };
 
 // arrow functions
-const pushIntoArray = (event, arr, sr_no = 0) => {
-  console.log(sr_no);
-  let data = event.target.value;
-  let new_data = "append once " + data;
-  console.log(new_data);
-  arr.push(new_data);
-  //   console.log(arr);
-  console.log("basket", basket);
-  console.log("garage", garage);
-  console.log("pallet", pallet);
-};
+// const pushIntoArray = (event, arr, sr_no = 0) => {
+//   console.log(sr_no);
+//   let data = event.target.value;
+//   let new_data = "append once " + data;
+//   console.log(new_data);
+//   arr.push(new_data);
+//   //   console.log(arr);
+//   console.log("basket", basket);
+//   console.log("garage", garage);
+//   console.log("pallet", pallet);
+// };
 // importance of return
 // const oneArg = (value) => {
 //   let area = value;
@@ -48,35 +48,41 @@ const pushIntoArray = (event, arr, sr_no = 0) => {
 // console.log(oneArg(2));
 
 // callback function
-// const myFunc = (callbackFn) => {
-//   let value = 2;
-//   return callbackFn(value);
+// let _arr = ["i love js", "macs are beautiful"];
+
+// const myForEachFunc = (callbackFn) => {
+//   var i = 0;
+//   while (i < _arr.length) {
+//     // console.log(i);
+//     callbackFn(_arr[i]);
+//     i++;
+//   }
 // };
 
 // const callbackFn = (value) => {
 //   console.log(value);
 // };
 
-// myFunc(callbackFn);
+// myForEachFunc(callbackFn);
 
-let _arr = [1, 2, 3, 4, 5];
+// let _arr = [1, 2, 3, 4, 5];
 
-_arr.forEach((val, ind) => {
-  console.log("ind", ind, "val", val + 2);
-});
-/////////////
+// _arr.forEach((val, ind) => {
+//   console.log("ind", ind, "val", val + 2);
+// });
+// /////////////
 
-let basket = [];
-let garage = [];
-let pallet = [];
+// let basket = [];
+// let garage = [];
+// let pallet = [];
 
-let element1 = document.querySelector(".select-fruits");
-let element2 = document.querySelector(".select-cars");
-let element3 = document.querySelector(".select-colours");
+// let element1 = document.querySelector(".select-fruits");
+// let element2 = document.querySelector(".select-cars");
+// let element3 = document.querySelector(".select-colours");
 
-element1.addEventListener("click", (event) => pushIntoArray(event, basket, 1));
-element2.addEventListener("click", (event) => pushIntoArray(event, garage, 2));
-element3.addEventListener("click", (event) => pushIntoArray(event, pallet, 3));
+// element1.addEventListener("click", (event) => pushIntoArray(event, basket, 1));
+// element2.addEventListener("click", (event) => pushIntoArray(event, garage, 2));
+// element3.addEventListener("click", (event) => pushIntoArray(event, pallet, 3));
 
 // element1.addEventListener("click", (event) => {
 //   let data = event.target.value;
@@ -111,6 +117,6 @@ element3.addEventListener("click", (event) => pushIntoArray(event, pallet, 3));
 //   console.log("pallet", pallet);
 // });
 
-function statusChecker() {
-  console.log("cheking status");
-}
+// function statusChecker() {
+//   console.log("cheking status");
+// }
