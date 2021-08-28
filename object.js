@@ -25,63 +25,63 @@
 
 // let x = 50;
 
-let fn = () => {
-  let x = 20;
-  let inner_fn = function () {
-    let x = 30;
-    console.log("x in inner fn ", x);
-  };
-  inner_fn();
-  console.log("x in fn", x);
-};
-fn();
+// let fn = () => {
+//   let x = 20;
+//   let inner_fn = function () {
+//     let x = 30;
+//     console.log("x in inner fn ", x);
+//   };
+//   inner_fn();
+//   console.log("x in fn", x);
+// };
+// fn();
 // console.log("x in module scope", x);
 
 // let this_fn = () => {
 //   console.log(this);
 // };
 
-// let user = {
-//   name: "sachin",
-//   email: "sachin@gmail.com",
-//   blogs: ["i love js", "macs are beautiful"],
+let user = {
+  name: "sachin",
+  email: "sachin@gmail.com",
+  blogs: ["i love js", "macs are beautiful"],
 
-//   login: () => {
-//     console.log("user is logged in");
-//   },
+  login: () => {
+    console.log("user is logged in");
+  },
 
-//   fn: () => {
-//     console.log("this is an method");
-//   },
+  fn: () => {
+    console.log("this is an method");
+  },
 
-// logBlog: function () {
-// console.time();
-// var x = 0;
-// var length = this.blogs.length;
-// while (x < length) {
-//   console.log(this.blogs[x]);
-//   x++;
-// }
-// for (let i = 0; i < length; i++) {
-//   console.log(this.blogs[i]);
-// }
-// printBlog = (value) => {
-//   console.log(value);
-// };
-// this.blogs.forEach(printBlog);
-// this.blogs.map(printBlog);
-// console.timeEnd();
-//console.log(this.blogs);
-//   },
+  // logBlog: function () {
+  //   console.time();
+  //   var x = 0;
+  //   var length = this.blogs.length;
+  //   while (x < length) {
+  //     console.log(this.blogs[x]);
+  //     x++;
+  //   }
+  //   for (let i = 0; i < length; i++) {
+  //     console.log(this.blogs[i]);
+  //   }
+  //   printBlog = (value) => {
+  //     console.log(value);
+  //   };
+  //   this.blogs.forEach(printBlog);
+  //   this.blogs.map(printBlog);
+  //   console.timeEnd();
+  //   console.log(this.blogs);
+  // },
 
-//   this_fn: function () {
-//     console.log(this); // in traditional fn, this keyword will bind to current obj.
-//   },
-//   //always use traditional way of writing fn in classes or obj methods
-//   this_arrow_fn: () => {
-//     console.log(this); //; in arrow fn, this keyword will always return window obj.
-//   },
-// };
+  this_fn: function () {
+    console.log(this.name); // in traditional fn, this keyword will bind to current obj.
+  },
+  //always use traditional way of writing fn in classes or obj methods
+  this_arrow_fn: () => {
+    console.log(this); //; in arrow fn, this keyword will always return window obj.
+  },
+};
 
 // how to access properties??
 //! 1. using dot notation
@@ -102,4 +102,24 @@ fn();
 
 // this_fn();
 // // user.name;
+
 // user.this_arrow_fn();
+
+// user.this_fn();
+
+// const obj = {
+//   firstName: "sachin",
+//   print: function () {
+//     console.log(this.firstName);
+//   },
+// };
+
+// setTimeout(obj.print, 100);
+
+// const product = function (a, b) {
+//   return a * b;
+// };
+
+// const double = product.bind(null, 2);
+
+// console.log(double(2), product(3, 2));
