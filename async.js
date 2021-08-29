@@ -1,99 +1,81 @@
-// console.log("line one");
-// console.log("line two");
+// const promiseFn = () => {
+//   return new Promise((resolve, reject) => {
+//     // fetching from an api
+//     let something = "success";
+//     if (something === "success") {
+//       resolve("abc");
+//       reject("abc");
+//     }
+//     if (something === "failure") {
+//       reject("abc");
+//       resolve("abc");
+//     }
+//   });
+// };
 
-// setTimeout(() => {
-//   console.log("this function will run after 2 seconds");
-// }, 1200000);
+// const { concatSeries } = require("async");
 
-// // for (let i = 0; i < 5000000000; i++) {
-// //   i; // simulating fetching from database
-// // }
+// promiseFn()
+//   .then((data) => {
+//     console.log("data", data);
+//   })
+//   .catch((err) => {
+//     console.log("error", err);
+//   });
 
-// console.log("line three");
-// console.log("line four");
+// fetch api
 
-const getTodos = (callback, path) => {
-  //   console.log(callback);
-
-  let request = new XMLHttpRequest();
-
-  request.addEventListener("readystatechange", () => {
-    // console.log("readystatechange", request.readyState);
-
-    if (request.readyState == 4 && request.status == "200") {
-      callback(undefined, request.responseText);
-    }
-
-    if (request.readyState == 4 && request.status == "404") {
-      callback("data is unavailable", undefined);
-    }
-  });
-
-  request.open("get", path);
-
-  request.send();
-};
-
-// getTodos((err, data) => {
-//   if (err) {
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+//   .then((response) => {
+//     return response.json(); //resolve({abc:123})
+//   })
+//   .then((abc) => {
+//     console.log("user1", abc);
+//     return fetch("https://jsonplaceholder.typicode.com/todos");
+//   })
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log("user2", data);
+//   })
+//   .catch((err) => {
 //     console.log(err);
-//   } else {
-//     console.log(data);
-//   }
-// }, "https://jsonplaceholder.typicode.com/todos/1");
+//   });
 
-callback_paymentSuccessfull = () => {
-  console.log("Payment is Successfull");
+// An Ecommerce website
+
+// Signup (userData)
+
+// user get registerd
+
+// login (username, password)
+
+// gets redirected to dashboard
+// stats api
+// order api // userId
+// cart api
+
+// ES6 we hav ASYnc Await
+
+let promiseFnAsync = async () => {
+  let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  console.log(response);
+  let data = await response.json();
+  console.log(data);
+
+  let response2 = await fetch("https://jsonplaceholder.typicode.com/todos/2");
+  console.log(response);
+  let data2 = await response2.json();
+  console.log(data2);
+
+  return [data, data2];
 };
 
-callback_paymentFailure = () => {
-  console.log("Payment is Failed");
-};
-
-const callback_doPayment = (
-  upiId,
-  otp,
-  callback_paymentSuccessfull,
-  callback_paymentFailure
-) => {
-  const databaseUpiId = "sachin@upi";
-  const databaseOTP = "1234";
-
-  if (upiId == databaseUpiId && otp == databaseOTP) {
-    callback_paymentSuccessfull();
-    return true;
-  } else {
-    callback_paymentFailure();
-    return false;
-  }
-};
-
-const upiVerification = (
-  upiId,
-  otp,
-  callback_doPayment,
-  callback_paymentSuccessfull,
-  callback_paymentFailure
-) => {
-  const databaseUpiId = "sachin@upi";
-  if (upiId === databaseUpiId) {
-    callback_doPayment(
-      upiId,
-      otp,
-      callback_paymentSuccessfull,
-      callback_paymentFailure
-    );
-    return true;
-  } else {
-    callback_paymentFailure();
-    return false;
-  }
-};
-
-upiVerification(
-  "sachin@upi",
-  1234655645,
-  callback_doPayment,
-  callback_paymentSuccessfull,
-  callback_paymentFailure
-);
+promiseFnAsync()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
