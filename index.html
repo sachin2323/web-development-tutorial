@@ -1,56 +1,58 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning JS</title>
+    <title>Let's Learn Vue JS</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .fav{
+            background-color: aquamarine;
+        };
+        .tc{
+            background-color:blueviolet;
+        }
+    </style>
 </head>
 <body>
-    <!-- <input class="check" type="checkbox" name="terms"  /> -->
-    <!-- <select class="select-fruits"  name="fruits">
-        <option value="apple">Apple</option>
-        <option value="banana">Banana</option>
-        <option value ="orange">Orange</option>
-    </select>
+    <h2>Let's Learn Vue 3</h2>
+    <div id="root">
 
-    <select class="select-cars abc bcd efg"  name="cars">
-        <option id="bmw" value="BMW">BMW</option>
-        <option value="Audi">Audi</option>
-        <option value ="Ferrari">Ferrari</option>
-    </select>
+        <!-- <div v-if="toShow">
+        <div>{{loggedIn}}</div>
+        </div>
+        <div v-else>
+        <div>Not Logged in</div>
+        </div>
 
-    <select class="select-colours"  name="colours">
-        <option value="yellow">yellow</option>
-        <option value="blue">blue</option>
-        <option value ="red">red</option>
-    </select> -->
+        <button @click="toggleShow()">Toggle Show</button> -->
 
-    <P>Counter</P>
-    <div id=number>0</div>
-    <button id="increment">increment</button>
-    <button id="decrement">decrement</button>
+
+        <div v-for="book in books" :class={fav:book.isFav} @click="toggleFav(book)" >
+        <div>{{book.title}}</div>
+        <div>{{book.author}}</div>
+        <a v-bind:href="book.url" target='blank'>Buy this book</a>
+        <div>{{book.likes}}</div>
+        <button @click="increaseLike(book)">Give a like</button>
+        <hr/>
+        </div>
+
+
+
+
+
+       <!-- <h1 style="text-align:center">{{a}}</h1>
+       <h1 style="text-align:center">{{b}}</h1>
+       <h1 style="text-align:center">{{computed(changeC)}}</h1>
+
+       
+       <button v-on:click="a++">Increase A</button>
+       <button v-on:click="b++">Increase B</button> -->
+
+       <!-- <button @click="increaseAndChange()">Increase</button>
+       <button @click="decreaseAndChange()">Decrease</button> -->
+    </div>
+    <script src="./sandbox.js"></script>
 </body>
-<!-- <script src="sandbox.js">
-    // Variables->let, const, var
-    // let num = 5;
-    // const _add = 20;
-    // console.log("initial add",_add);
-    // // add = 20;
-    // console.log("changed add",_add);
-
-
-    // 7 Datatypes:
-    // String -> 'orange', "I'm feeling sleepy", "anyone@gmail.com",
-    // Number -> 0, 20, -20, 3.14, 4.22222,
-    // Boolean -> true, false ,
-    // Null ->  Explicitly define null to control the flow of program or as needed,
-    // Undefined -> By default the JS sets this value;
-    // Object -> Complex datatypes, arrays, Dates
-    // Symbol-> this is generally used with object
-
-</script>
-<script src="control-flow.js"></script>-->
-<!-- <script src="functions.js"></script>  -->
-<script src="object.js"></script>
-<!-- <script src="dom.js"></script> -->
 </html>
