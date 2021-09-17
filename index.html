@@ -29,29 +29,23 @@
         <button @click="toggleShow()">Toggle Show</button> -->
 
 
-        <div v-for="book in books" :class={fav:book.isFav} @click="toggleFav(book)" >
+        <div v-for="book in favBooks" :class={fav:book.isFav} @click="toggleFav($event,book)" >
         <div>{{book.title}}</div>
         <div>{{book.author}}</div>
         <a v-bind:href="book.url" target='blank'>Buy this book</a>
         <div>{{book.likes}}</div>
-        <button @click="increaseLike(book)">Give a like</button>
+        <button @click="increaseLike($event,book)">Give a like</button>
         <hr/>
         </div>
+    
 
-
-
-
-
-       <!-- <h1 style="text-align:center">{{a}}</h1>
+       <h1 style="text-align:center">{{a}}</h1>
        <h1 style="text-align:center">{{b}}</h1>
-       <h1 style="text-align:center">{{computed(changeC)}}</h1>
+       <h1 style="text-align:center">{{sumFn}}</h1>
 
        
        <button v-on:click="a++">Increase A</button>
-       <button v-on:click="b++">Increase B</button> -->
-
-       <!-- <button @click="increaseAndChange()">Increase</button>
-       <button @click="decreaseAndChange()">Decrease</button> -->
+       <button v-on:click="b++">Increase B</button>
     </div>
     <script src="./sandbox.js"></script>
 </body>
