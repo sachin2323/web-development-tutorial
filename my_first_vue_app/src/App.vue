@@ -1,33 +1,47 @@
-<template>
-<Header/>
+<template >
+<div id="any" @close="closeWasCalled">
+<!-- <Header/>
 <About/>
 <TestComponent/>
-<Footer/>
-</template>
+<Footer/> -->
+<!-- <button @click="toggleParagraph" >
+  Show Paragraph
+</button>
+<div v-if="showPara" > -->
+<FormComponent :discount="discount" :users='users'/>
+<!-- </div> -->
+</div>
+</template> 
 
 <script>
-import Footer from './components/Footer.vue'
-import Header from './components/Header.vue'
-import About from './components/About.vue'
-import TestComponent from './components/TestComponent.vue';
+// import Footer from './components/Footer.vue'
+// import Header from './components/Header.vue'
+// import About from './components/About.vue'
+// import TestComponent from './components/TestComponent.vue';
+import FormComponent from './components/FormComponent.vue';
 
 
 export default {
-  components: { Footer, Header, About,TestComponent },
-  name: 'App',
-
+  components: { FormComponent },
   data(){
-    return{
-      number:10
+    return {
+      discount:0,
+      users:["sachin", "abhishek","sony"],
+      showPara:false,
     }
   },
-
+  name: 'App',
   methods:{
-
-
+    toggleParagraph(){
+     
+      this.showPara = !this.showPara;
+    },
+    closeWasCalled(){
+       console.log("this is called")
+    }
   },
   computed:{
-
+ 
   }
 }
 </script>
@@ -43,6 +57,9 @@ export default {
 }
 
 h1{
-  color:red
+  color:red;
 }
+/* #any{
+background-color:blue;
+} */
 </style>
