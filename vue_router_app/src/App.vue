@@ -6,14 +6,24 @@
   
     <button @click="back">Back</button>
     <button @click="forward">Forward</button>
-    <button @click="redirect">Redirect</button>
+    <button @click="redirect">Redirect</button><br><br><br>
+
+    <Blogs v-if="blogs.length" :blogs="blogs"></Blogs>
   
   </div>
   <router-view/>
 </template>
-
 <script>
+
+import Blogs from "./views/blogs/Blogs.vue"
+import getBlogs from "./composables/getBlogs";
 export default {
+  components: { Blogs },
+  setup(){
+    const {blogs,error,fetchData} = getBlogs();
+    fetchData();
+    return {blogs};
+  },
   methods:{
     back(){
       this.$router.go(-2);

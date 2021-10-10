@@ -1,0 +1,8 @@
+{
+  "blogs": [
+    { "id": 1, "name": "Title 1", "detail": "lorem20" },
+    { "id": 2, "name": "Title 2", "detail": "lorem" },
+    { "id": 3, "name": "Title 3", "detail": "lorem" },
+    { "id": 4, "name": "Title 4", "detail": "Lorem" }
+  ]
+}
